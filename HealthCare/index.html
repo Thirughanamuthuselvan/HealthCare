@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care Center - Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Health Care Center - Appointment</h3>
+        <table>
+            <!-- form input -->
+            <form action="/appointment" method="post">
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="name">Name*</label></th>
+                        <td> <input type="text" id="name" placeholder="Enter your name" required></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="gender" id="gender">Gender*</label></th>
+                        <td>
+                            <input type="radio" name="gender" value="male" required>Male
+                            <input type="radio" name="gender" value="female" required>Female
+                            <input type="radio" name="gender" value="others" required>Others
+                        </td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="mail">Email address</label></th>
+                        <td><input type="email" id="mail" placeholder="Example:abc@gmal.com" required></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="mobileNo">Mobile No*</label></th>
+                        <td><input type="number" id="mobileNo" placeholder="Enter your mobile no"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div class="sub-con">
+                        <th> <label for="service">Services*</label></th>
+                        <td><input type="text" id="services" name="service" list="serviceList">
+
+                            <datalist id="serviceList">
+                                <option value="Dentistry">
+                                <option value="Midwifery">
+                                <option value="Nursing">
+                                <option value="Medicine">
+                                <option value="Optometry">
+                                <option value="Psychology">
+                                <option value="Physical therapy">
+                                <option value="Others">
+                            </datalist>
+                        </td>
+                    </div>
+                </tr>
+
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="date">Date*</label></th>
+                        <td> <input type="date" id="date" required></td>
+                    </div>
+                </tr>
+
+                <!-- select time for appointment-->
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="time">Time*</label></th>
+                        <td>
+                            <select name="time" id="time">
+                                <option value="10.00AM">10.00 AM</option>
+                                <option value="10.30AM">10.30 AM</option>
+                                <option value="11.00AM">11.00 AM</option>
+                                <option value="11.30AM">11.30 AM</option>
+                                <option value="12.00PM">12.00 PM</option>
+                                <option value="12.30PM">12.30 PM</option>
+                                <option value="01.00PM">01.00 PM</option>
+                                <option value="01.30PM">01.30 PM</option>
+                                <option value="02.00PM">02.00 PM</option>
+                            </select>
+                        </td>
+
+                    </div>
+                </tr>
+
+                <tr>
+                    <div class="sub-con">
+                        <th><label for="address">Address*</label></th>
+                        <td>
+                            <textarea name="address" id="address" cols="25" rows="5"
+                                required>Enter your address</textarea>
+                        </td>
+                    </div>
+                </tr>
+        </table>
+        <label for="terms"><input type="checkbox" required><a href="#submit" id="terms-ref" class="b"> I agree to terms
+                of service and privacy policy.</a></label><br>
+        <input type="button" id="button" value="Submit">
+        </form>
+
+</body>
+
+</html>
